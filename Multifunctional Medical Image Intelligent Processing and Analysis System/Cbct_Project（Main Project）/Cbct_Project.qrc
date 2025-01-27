@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/Cbct_Project">
+        <file>images/open.png</file>
+        <file>images/new.png</file>
+        <file>images/save.png</file>
+        <file>images/saveo.png</file>
+        <file>images/openfolder.png</file>
+        <file>images/close.png</file>
+        <file>images/icon.png</file>
+    </qresource>
+</RCC>
