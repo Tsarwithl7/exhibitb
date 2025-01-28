@@ -1,0 +1,1 @@
+DIR *d.lib /B >LIBLIST.TXT
