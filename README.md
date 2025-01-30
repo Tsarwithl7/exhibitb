@@ -1,15 +1,28 @@
-Multifunctional Medical Image Intelligent Processing and Analysis System for Precision Orthodontics is a system based on medical images in various formats. It leverages modern computer software's computational and storage capabilities, integrating knowledge and experience from orthodontics for diagnosing and analyzing dental issues. As society progresses, people’s focus on dental health has increasingly grown. The system's data analysis module, combined with the results from the image intelligent algorithm module and the user-marked data in the visualization module, is used for distance measurement or angle measurement. Specifically, it includes common orthodontic measurements, such as tooth width, arch length, arch width, and Spee curve measurements. Based on these measurements, orthodontic analysis and diagnosis are carried out, providing analysis reports that include common assessments like cephalometric analysis, dental crowding evaluation, midline relationship evaluation, and Bolton Index analysis. The report reflects the user's data annotations, measurements, and analysis results.
+Design of Vertical Search Engine based on Lucene
 
-The key technologies used in the project include Qt application development, Python deep learning algorithm design, C++ graphical rendering interaction, and SQL databases.
+Project Background:
+Lucene is an open-source full-text search engine toolkit, providing a robust architecture for building search engines rather than being a complete search engine itself. In the Java development environment, Lucene is a mature and widely used open-source tool.
 
-Oral diseases are closely related to human health beyond just aesthetic factors. Currently, the prevalence rate of oral diseases in China exceeds 90%, while the treatment rate is only about 10%, severely impacting public health. A digital dental medical image processing and analysis system can improve the diagnostic accuracy and work efficiency of orthodontists, significantly enhancing the digitalization of orthodontics. The system is divided into four modules: data management, image intelligent algorithm, visualization, and data analysis.
+Developing a vertical search engine based on Lucene is a key experimental component of the Information Retrieval course. With advancements in vector representations and approximate nearest neighbor algorithms, the latest version, Lucene 9.0, has introduced these new features, significantly improving information retrieval performance.
 
-Data Management Module: The core function of this module is data operations. It includes standardized DICOM medical image format storage and management, data migration backup, desensitization export operations, and providing standardized data operation APIs.
+Project Description:
+This project aims to design a vertical search engine using Lucene, exploring different techniques provided by Lucene to analyze the differences in storage efficiency, query speed, and retrieval accuracy. The goal is to support the Information Retrieval course by providing an educational tool that demonstrates various retrieval methodologies.
 
-Image Intelligent Algorithm Module: This module includes mainstream medical image segmentation and key point detection algorithms. Specifically, it includes:
+Implementation Details:
+Data Source:
+The search engine does not include data collection. Instead, commonly used text datasets will be selected as the raw data source.
+Indexing and Ranking Models:
 
-Automatic dental segmentation algorithm for 2D X-ray images,
-2D cephalometric landmark detection algorithm,
-Cephalometric and patient side-view photo fusion algorithm based on key point matching,
-3D CBCT dental and alveolar bone segmentation algorithm. This module achieves automatic or semi-automatic segmentation in medical images based on algorithms and supports recommending applicable segmentation algorithms based on the image type. For X-ray and CBCT image data, compared to manual segmentation, it supports using methods like region growing, region splitting and merging, and watershed algorithms for fast organ or element segmentation and classification.
-Visualization Module: This module supports 2D and 3D image visualization and interactive operations. For 2D images, it supports interactive functions like marking and measurement, along with common image processing operations such as brightness adjustment, contrast adjustment, and cropping. It also stores the marks and image copies persistently. For 3D images, it supports three-view display and 3D rendering, using Ray-Casting direct volume rendering and Maximum Intensity Projection (MIP) techniques for image rendering. It supports multiple color mappings, preset thresholds, and ROI operations, and allows for spatial interaction to locate and map the rendered images back to the original. For results from the image intelligent algorithm module, they need to be overlaid onto the original image for visualization, and pixel-level segmentation and classification result modifications are supported. The module can use Marching Cubes or other algorithms for 3D mesh reconstruction of CBCT segmentation results.
+A Bag-of-Words (BoW) model will be used to construct the index.
+Both TF-IDF and BM25 will be implemented for relevance scoring.
+Vector-Based Indexing and Nearest Neighbor Search:
+
+A high-dimensional vector index will be created to support nearest neighbor search.
+This implementation will leverage the Hierarchical Navigable Small World (HNSW) graph algorithm, addressing the needs of data scientists and machine learning researchers who require vector-based document indexing.
+Performance and Accuracy Comparison:
+
+Multiple retrieval methods will be evaluated in terms of efficiency and precision, providing insights into their trade-offs.
+Extensibility for Experimental Learning:
+
+The system will retain document data extension interfaces, facilitating additional experiments and coursework enhancements for students.
+This project serves as a practical demonstration of modern search techniques and their impact on retrieval performance and accuracy, offering valuable insights for students in the Information Retrieval course.
